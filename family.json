@@ -1,0 +1,82 @@
+[
+  {
+    "name": "John",
+    "age": 45,
+    "parents": [],
+    "ancestors": [],
+    "children": ["Alice", "Bob"],
+    "grandchildren": ["Olivia", "Peter"]
+  },
+  {
+    "name": "Mary",
+    "age": 42,
+    "parents": [],
+    "ancestors": [],
+    "children": ["Alice", "Bob"],
+    "grandchildren": ["Olivia", "Peter"]
+  },
+  {
+    "name": "Alice",
+    "age": 20,
+    "parents": ["John", "Mary"],
+    "ancestors": ["John", "Mary"],
+    "children": [],
+    "grandchildren": []
+  },
+  {
+    "name": "Bob",
+    "age": 18,
+    "parents": ["John", "Mary"],
+    "ancestors": ["John", "Mary"],
+    "children": [],
+    "grandchildren": []
+  },
+  {
+    "name": "David",
+    "age": 70,
+    "parents": [],
+    "ancestors": [],
+    "children": ["Grace", "Henry"],
+    "grandchildren": ["Olivia", "Peter"]
+  },
+  {
+    "name": "Eva",
+    "age": 68,
+    "parents": [],
+    "ancestors": [],
+    "children": ["Grace", "Henry"],
+    "grandchildren": ["Olivia", "Peter"]
+  },
+  {
+    "name": "Grace",
+    "age": 30,
+    "parents": ["David", "Eva"],
+    "ancestors": ["David", "Eva"],
+    "children": ["Olivia"],
+    "grandchildren": []
+  },
+  {
+    "name": "Henry",
+    "age": 28,
+    "parents": ["David", "Eva"],
+    "ancestors": ["David", "Eva"],
+    "children": ["Peter"],
+    "grandchildren": []
+  },
+  {
+    "name": "Olivia",
+    "age": 5,
+    "parents": ["Alice", "Bob"],
+    "ancestors": ["John", "Mary", "David", "Eva"],
+    "children": [],
+    "grandchildren": []
+  },
+  {
+    "name": "Peter",
+    "age": 3,
+    "parents": ["Alice", "Bob"],
+    "ancestors": ["John", "Mary", "David", "Eva"],
+    "children": [],
+    "grandchildren": []
+  }
+]
