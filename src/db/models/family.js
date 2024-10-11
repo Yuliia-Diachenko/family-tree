@@ -12,25 +12,26 @@ const personSchema = new Schema({
     required: true
   },
   parents: [{
-    type: Schema.Types.ObjectId,
+    type: String,
     ref: 'Person'
   }],
   ancestors: [{
-    type: Schema.Types.ObjectId,
+    type: String,
     ref: 'Person'
   }],
   children: [{
-    type: Schema.Types.ObjectId,
+    type: String,
     ref: 'Person'
   }],
   grandchildren: [{
-    type: Schema.Types.ObjectId,
+    type: String,
     ref: 'Person'
   }]
 
 },
  {
   timestamps: true,
+  versionKey: false
 
  });
 

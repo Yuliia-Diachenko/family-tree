@@ -4,7 +4,7 @@ import createHttpError from 'http-errors';
 export const getAllFamilyController = async (req, res, next ) => {
 
  const family = await getAllFamily();
- res.json({
+ res.status(200).json({
     status: 200,
     message: 'Successfully found family!',
     data: family,
@@ -29,7 +29,7 @@ export const getPersonByIdController = async (req, res) => {
 
 export const createPersonController = async (req, res) => {
     const person = await createPerson(req.body);
-    req.json({
+    res.json({
         status: 101,
         message: 'Successfully created a person!',
         data: person,
