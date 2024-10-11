@@ -1,0 +1,58 @@
+tags:
+  - Family
+summary: Create person
+operationId: createPerson
+description: 'Create a person with payload'
+requestBody:
+      schema:
+        type: object
+        required:
+          - name
+          - age
+        properties:
+          name:
+            description: "Person's name"
+            type: string
+            example: "David"
+          age:
+            description: "Persont's age"
+            type: number
+            example: 12
+          parents:
+            description: "Parents person"
+            type: string
+            example: ["Alice", "Bob"]
+          ancestors:
+            description: "Ancestors person"
+            type: string
+            example: ["John", "Mary", "David", "Eva"]
+          children:
+            description: "Children person"
+            type: string
+            example: ["Grace", "Henry"]
+          grandchildren:
+            description: "Grandchildren person"
+            type: string
+responses:
+  '201':
+    description: Creates a person
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - status
+            - message
+            - data
+          properties:
+            status:
+              type: integer
+              example: 201
+            message:
+              type: string
+              example: Successfully created a person!
+            data:
+              type: object
+              $ref: '../../components/schemas/family.yaml'
+  '404':
+    $ref: '../../components/responses/404.yaml'

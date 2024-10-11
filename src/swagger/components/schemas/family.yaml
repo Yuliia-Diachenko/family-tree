@@ -1,0 +1,34 @@
+type: object
+required:
+  - _id
+  - name
+  - age
+properties:
+  _id:
+    description: "Person's id"
+    type: string
+    example: 65e4decdd286b30065d54af9
+  name:
+    description: "Person's name"
+    type: string
+    example: "David"
+  age:
+    description: "Persont's age"
+    type: number
+    example: 12
+  parents:
+    description: "Parents person"
+    type: string
+    example: ["Alice", "Bob"]
+  ancestors:
+    description: "Ancestors person"
+    type: string
+    example: ["John", "Mary", "David", "Eva"]
+  children:
+    description: "Children person"
+    type: string
+    example: ["Grace", "Henry"]
+  grandchildren:
+    description: "Grandchildren person"
+    type: string
+    example: ["Olivia", "Peter"]

@@ -1,0 +1,29 @@
+openapi: 3.1.0
+info:
+  version: 1.0.0
+  title: Family Tree
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  description: This is a documentation of Contacts app
+tags:
+  - name: Family
+    description: Operations about family tree.
+servers:
+  - url: http://localhost:3000
+  - url: https://nodejs-hw-mongodb-12-o34r.onrender.com
+paths:
+  /family:
+    get:
+      $ref: ../src/swagger/paths/family/get.yaml
+    post:
+      $ref: ../src/swagger/paths/family/post.yaml
+  /family/{id}:
+    get:
+      $ref: ../src/swagger/paths/family/{id}/get.yaml
+    patch:
+      $ref: ../src/swagger/paths/family/{id}/patch.yaml
+    delete:
+      $ref: ../src/swagger/paths/family/{id}/delete.yaml
+
+
