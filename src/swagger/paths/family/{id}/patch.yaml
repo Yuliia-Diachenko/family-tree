@@ -1,65 +1,68 @@
-# tags:
-#   - Family
-# summary: Update person
-# operationId: updatePerson
-# description: 'Update a person by ID'
-# parameters:
-#   - in: path
-#     name: id
-#     required: true
-#     description: The ID of the person to update
-#     schema:
-#       type: string
-#       example: '65ca67e7ae7f10c88b598384'
-# requestBody:
-#       schema:
-#         type: object
-#         properties:
-#           name:
-#             description: "Person's name"
-#             type: string
-#             example: "David"
-#           age:
-#             description: "Persont's age"
-#             type: number
-#             example: 12
-#           parents:
-#             description: "Parents person"
-#             type: string
-#             example: ["Alice", "Bob"]
-#           ancestors:
-#             description: "Ancestors person"
-#             type: string
-#             example: ["John", "Mary", "David", "Eva"]
-#           children:
-#             description: "Children person"
-#             type: string
-#             example: ["Grace", "Henry"]
-#           grandchildren:
-#             description: "Grandchildren person"
-#             type: string
-#             example: ["Olivia", "Peter"]
-# responses:
-#   '200':
-#     description: Successfully updated the person!
-#     content:
-#       application/json:
-#         schema:
-#           type: object
-#           required:
-#             - status
-#             - message
-#             - data
-#           properties:
-#             status:
-#               type: integer
-#               example: 200
-#             message:
-#               type: string
-#               example: Successfully updated the person!
-#             data:
-#               type: object
-#               $ref: '../../../components/schemas/family.yaml'
+tags:
+  - Family
+summary: Update person
+operationId: updatePerson
+description: 'Update a person by ID'
+security: []
+parameters:
+  - in: path
+    name: id
+    required: true
+    description: The ID of the person to update
+    schema:
+      type: string
+      example: '65ca67e7ae7f10c88b598384'
+requestBody:
+  content:
+    aplication/json:
+      schema:
+        type: object
+        properties:
+          name:
+            description: "Person's name"
+            type: string
+            example: "David"
+          age:
+            description: "Persont's age"
+            type: number
+            example: 12
+          parents:
+            description: "Parents person"
+            type: string
+            example: ["Alice", "Bob"]
+          ancestors:
+            description: "Ancestors person"
+            type: string
+            example: ["John", "Mary", "David", "Eva"]
+          children:
+            description: "Children person"
+            type: string
+            example: ["Grace", "Henry"]
+          grandchildren:
+            description: "Grandchildren person"
+            type: string
+            example: ["Olivia", "Peter"]
+responses:
+  '200':
+    description: Successfully updated the person!
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - status
+            - message
+            - data
+          properties:
+            status:
+              type: integer
+              example: 200
+            message:
+              type: string
+              example: Successfully updated the person!
+            data:
+              type: object
+              $ref: '../../../components/schemas/family.yaml'
 
-#   '404':
-#     $ref: '../../../components/responses/404.yaml'
+  '404':
+    $ref: '../../../components/responses/404.yaml'

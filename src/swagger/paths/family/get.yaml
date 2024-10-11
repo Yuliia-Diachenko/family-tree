@@ -3,20 +3,34 @@ tags:
 summary: Get list of family
 operationId: getFamily
 description: 'Get list of persons with this endpoint'
-parameters:
-  properties:
-    status:
-      type: integer
-      example: 200
-    message:
-      type: string
-      example: Successfully found family!
-    data:
-      type: object
-      required:
-        - data
-  properties:
-    data:
-      type: array
-      items:
-      $ref: '../../components/schemas/family.yaml'
+security: []
+parameters: []
+responses:
+  '200':
+    description: 'Get family'
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - status
+            - message
+            - data
+          properties:
+            status:
+              type: integer
+              example: 200
+            message:
+              type: string
+              example: Successfully found family!
+            data:
+              type: object
+              required:
+                - data
+              properties:
+                data:
+                  type: array
+                  items:
+                    $ref: ../../components/schemas/family.yaml
+  '404':
+    $ref: ../../components/responses/404.yaml

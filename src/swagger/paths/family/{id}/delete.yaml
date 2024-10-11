@@ -3,6 +3,7 @@ tags:
 summary: Delete person by id
 operationId: deletePerson
 description: 'Delete person by id'
+security: []
 parameters:
   - in: path
     name: id
