@@ -1,5 +1,5 @@
 tags:
-  - Family
+  - Family person
 summary: Update person
 operationId: updatePerson
 description: 'Update a person by ID'

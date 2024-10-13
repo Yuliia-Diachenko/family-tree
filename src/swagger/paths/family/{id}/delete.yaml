@@ -1,5 +1,5 @@
 tags:
-  - Family
+  - Family person
 summary: Delete person by id
 operationId: deletePerson
 description: 'Delete person by id'
