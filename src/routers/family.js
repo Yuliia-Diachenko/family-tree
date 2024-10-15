@@ -4,6 +4,7 @@ import { patchPersonController, upsertPersonByIdController, getAllFamilyControll
 import {createPersonSchema, updatePersonSchema } from '../validation/family.js';
 import { validateBody } from "../midllewares/validateBody.js";
 import { isValidId } from "../midllewares/isValidId.js";
+import { generateUniqueId } from "../midllewares/generateId.js";
 
 const router = Router();
 
@@ -11,7 +12,7 @@ router.get('/family', ctrlWrapper(getAllFamilyController));
 
 router.get('/family/:personId', isValidId, ctrlWrapper(getPersonByIdController));
 
-router.post('/family', validateBody(createPersonSchema),ctrlWrapper(createPersonController));
+router.post('/family', validateBody(createPersonSchema), generateUniqueId, ctrlWrapper(createPersonController));
 
 router.delete('/family/:personId', ctrlWrapper(deletePersonByIdController));
 
